@@ -523,6 +523,10 @@ func TestAccAWSElasticacheReplicationGroup_ClusterMode_UpdateNumNodeGroups_Scale
 					resource.TestCheckResourceAttr(resourceName, "member_clusters.#", "6"),
 					resource.TestCheckTypeSetElemAttr(resourceName, "member_clusters.*", fmt.Sprintf("%s-0001-001", rName)),
 					resource.TestCheckTypeSetElemAttr(resourceName, "member_clusters.*", fmt.Sprintf("%s-0001-002", rName)),
+					resource.TestCheckTypeSetElemAttr(resourceName, "member_clusters.*", fmt.Sprintf("%s-0002-001", rName)),
+					resource.TestCheckTypeSetElemAttr(resourceName, "member_clusters.*", fmt.Sprintf("%s-0002-002", rName)),
+					resource.TestCheckTypeSetElemAttr(resourceName, "member_clusters.*", fmt.Sprintf("%s-0003-001", rName)),
+					resource.TestCheckTypeSetElemAttr(resourceName, "member_clusters.*", fmt.Sprintf("%s-0003-002", rName)),
 				),
 			},
 			{
